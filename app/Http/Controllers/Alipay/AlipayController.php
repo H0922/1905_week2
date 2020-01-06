@@ -249,4 +249,31 @@ class AlipayController extends Controller
         echo '解密后>>>>>'.$j;
     }
 
+
+    //周考
+
+    public function week2(){
+        $str=$_GET['str'];
+        $strlen=strlen($str);
+        $j="";
+        for($i=0;$i<$strlen;$i++){
+            $a=ord($str[$i])+5;
+            $b=chr($a);
+            $j.=$b;
+        }
+        echo $j;
+    }
+
+    public function week(){
+        $str=$_GET['str'];
+        $strlen=strlen($str);
+        $j="";
+        for($i=0;$i<$strlen;$i++){
+            $a=ord($str[$i])-5;
+            $b=chr($a);
+            $j.=$b;
+        }
+        echo $j;
+    }
+
 }

@@ -32,4 +32,9 @@ Route::get('alipay/userlist','Alipay\AlipayController@userlist')->middleware('Us
 
 Route::get('jia','Alipay\AlipayController@jia');
 
+//zhoukao
+
+Route::get('week2','Alipay\AlipayController@week2');
+Route::get('week','Alipay\AlipayController@week');
+
 
