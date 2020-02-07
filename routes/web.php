@@ -18,23 +18,16 @@ Route::get('/phpinfo', function () {
     phpinfo();
 });
 //支付
-Route::get('alipay/pay','Alipay\AlipayController@alipay');
-//同步
-Route::get('alipay/return','Alipay\AlipayController@return');
-//异步
-Route::post('alipay/notify','Alipay\AlipayController@notify');
-//注册
-Route::post('alipay/create','Alipay\AlipayController@create');
-//登录
-Route::post('alipay/login','Alipay\AlipayController@login');
-//访问记录
-Route::get('alipay/userlist','Alipay\AlipayController@userlist')->middleware('UserList');
+Route::get('server/goods','Server\ServerController@goods');
+Route::get('server/good','Server\ServerController@good');
+Route::get('server/rsa','Server\ServerController@rsa');
+Route::get('sign/sign1','Sign\SignController@sign1');
 
-Route::get('jia','Alipay\AlipayController@jia');
+Route::get('server/curlpost','Server\ServerController@curlpost');
+Route::get('server/curlfile','Server\ServerController@curlfile');
+Route::get('server/sing','Server\ServerController@sing');
+Route::get('server/sign2','Server\ServerController@sign2');
 
-//zhoukao
+Auth::routes();
 
-Route::get('week2','Alipay\AlipayController@week2');
-Route::get('week','Alipay\AlipayController@week');
-
-
+Route::get('/home', 'HomeController@index')->name('home');
