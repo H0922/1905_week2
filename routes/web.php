@@ -23,6 +23,7 @@ Route::get('server/good','Server\ServerController@good');
 Route::get('server/rsa','Server\ServerController@rsa');
 Route::get('sign/sign1','Sign\SignController@sign1');
 Route::get('sign/aes','Sign\SignController@aes');
+Route::get('rsa2','Sign\SignController@rsa2');
 
 Route::get('server/curlpost','Server\ServerController@curlpost');
 Route::get('server/curlfile','Server\ServerController@curlfile');
